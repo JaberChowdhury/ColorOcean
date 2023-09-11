@@ -1,0 +1,20 @@
+hexadecimal
+rgb
+opositeHexadecimal
+opositeRgb
+
+
+hexadecimal ---------> rgb
+hexadecimal ---------> opositeHexadecimal
+hexadecimal ---------> opositeRgb
+
+rgb -----------------> opositeRgb
+rgb -----------------> hexadecimal
+rgb -----------------> opositeHexadecimal
+
+
+☄️opositeHexadecimal
+hexadecimal ---> hexaTorgb ---> opositeRgb ---> rgbTohexa
+
+☄️opositeRgb
+hexadecimal ---> hexaTorgb ---> opositeRgb
