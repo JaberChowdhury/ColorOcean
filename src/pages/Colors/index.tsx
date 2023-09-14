@@ -2,6 +2,8 @@ import { useOppositeHexa } from '../../hooks';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateColors } from '../../features';
 import { Color } from '../../components';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 
 type stateType = {
     colorsReducer: {
@@ -23,7 +25,6 @@ const Colors = () => {
         return (
             <Color
                 key={id}
-                id={id}
                 color_main={color_main}
                 color_opposite={color_opposite}
             />
@@ -31,14 +32,31 @@ const Colors = () => {
     });
 
     return (
-        <div className="pageParents relative bg-gradient-to-r from-blue-500 to-cyan-500">
-            <div
+        <div
+            style={{
+                background: `linear-gradient(135deg, #eceddc 25%, transparent 25%) 50px 0,
+linear-gradient(225deg, #eceddc 25%, transparent 25%) 50px 0,
+linear-gradient(315deg, #eceddc 25%, transparent 25%),
+linear-gradient(45deg, #eceddc 25%, transparent 25%)`,
+                backgroundSize: '20px 20px',
+                backgroundColor: '#c9b4de',
+            }}
+            className="pageParents relative"
+        >
+            <Button
+                type="button"
                 onClick={() => {
                     dispatch(updateColors());
                 }}
+                className="sticky z-30 top-[90%] left-[60%]"
             >
                 Update colors
-            </div>
+            </Button>
+
+            <Card className="w-4/5 py-4 text-center font-bold mb-2 text-2xl">
+                Colors
+            </Card>
+
             <div className="w-full flex justify-around flex-wrap relative p-2 gap-2">
                 {allcolors}
             </div>
