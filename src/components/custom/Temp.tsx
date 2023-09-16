@@ -5,12 +5,10 @@ const Temp: React.FC = () => {
     const ref = useRef<HTMLDivElement>(null);
     const canvasWidth = 40000; // Replace with your desired width
     const canvasHeight = 30000;
-
     const onButtonClick = useCallback(() => {
         if (ref.current === null) {
             return;
         }
-
         toPng(ref.current, { cacheBust: true })
             .then((dataUrl) => {
                 const link = document.createElement('a');

@@ -11,17 +11,7 @@ const Pallette = () => {
     const color_opposite = useOppositeHexa(color_main);
     console.log(width);
     return (
-        <div
-            style={{
-                background: `linear-gradient(135deg, #eceddc 25%, transparent 25%) 50px 0,
-linear-gradient(225deg, #eceddc 25%, transparent 25%) 50px 0,
-linear-gradient(315deg, #eceddc 25%, transparent 25%),
-linear-gradient(45deg, #eceddc 25%, transparent 25%)`,
-                backgroundSize: '20px 20px',
-                backgroundColor: '#c9b4de',
-            }}
-            className="w-full pt-6 min-h-screen flex items-center flex-col relative p-2"
-        >
+        <div className="w-full pt-6 min-h-screen flex items-center flex-col relative p-2">
             <div className="w-full text-left font-bold">
                 <motion.div
                     animate={{
@@ -58,8 +48,12 @@ linear-gradient(45deg, #eceddc 25%, transparent 25%)`,
                     {color_opposite}
                 </motion.div>
             </Card>
-            <Rotatebox color_main={color_main} />
             <Gradientbar color_main={color_main} />
+            <Gradientbar color_main={color_opposite} />
+            <div className="w-full flex flex-wrap justify-center items-center relative">
+                <Rotatebox color_main={color_main} />
+                <Rotatebox color_main={color_opposite} />
+            </div>
         </div>
     );
 };
