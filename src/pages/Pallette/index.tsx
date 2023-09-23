@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { Rotatebox, Gradientbar } from '../../components';
+import { Rotatebox, Gradientbar, Books } from '../../components';
 import { useOppositeHexa, useScreen } from '../../hooks';
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
@@ -50,6 +50,7 @@ const Pallette = () => {
             </Card>
             <Gradientbar color_main={color_main} />
             <Gradientbar color_main={color_opposite} />
+            <Books color_main={color_main} />
             <div className="w-full flex flex-wrap justify-center items-center relative">
                 <Rotatebox color_main={color_main} />
                 <Rotatebox color_main={color_opposite} />
